@@ -1,0 +1,61 @@
+-----------------------------------------------------------
+--Llenamos la Tabla Estado_Cliente_PAGO con su Dominios--
+-----------------------------------------------------------
+insert into ESTADO_CLIENTE_PAGO Values(
+'Pago')
+insert into ESTADO_CLIENTE_PAGO Values(
+'Adeuda')
+
+-----------------------------------------------------------
+--Llenamos la Tabla Estado_Incripcion con su Dominios--
+-----------------------------------------------------------
+Insert into ESTADO_INSCRIPCION Values(
+'Renovado')
+Insert into ESTADO_INSCRIPCION Values(
+'Proximo a Renovar')
+Insert into ESTADO_INSCRIPCION Values(
+'Nesesita Renovar')
+Insert into ESTADO_INSCRIPCION Values(
+'Dado de Baja')
+
+-----------------------------------------------------------
+--Llenamos la Tabla Sexo con su Dominios--
+-----------------------------------------------------------
+Insert into SEXO values(
+'Masculino','M')
+Insert into SEXO values(
+'Femenino','F')
+
+------------------------------------------------------------
+--Llenamos la Tabla Dias con su Dominios--
+------------------------------------------------------------
+Insert into DIAS values(
+'Lunes')
+Insert into DIAS values(
+'Martes')
+Insert into DIAS values(
+'Miercoles')
+ Insert into DIAS values(
+'Jueves')
+ Insert into DIAS values(
+'Viernes')
+
+------------------------------------------------------------
+--Llenamos la Tabla Importes con su Dominios--
+------------------------------------------------------------
+Insert into IMPORTES Values(
+'Prescio Unitario')
+Insert into IMPORTES Values(
+'Precio 2 Clases')
+Insert into IMPORTES Values(
+'Precio 3 Clases')
+Insert into IMPORTES Values(
+'Precio Mensual')
+
+------------------------------------------------------------
+--Llenamos la Tabla Estado_Profesor con su Dominios--
+------------------------------------------------------------
+Insert into ESTADO_PROFESOR values(
+'Pago')
+Insert into ESTADO_PROFESOR values(
+'No Pagado')

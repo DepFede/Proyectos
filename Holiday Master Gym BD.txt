@@ -1,0 +1,183 @@
+------------------------------------------------------------
+--Creamos la Base de Datos llamado HOLIDAY_MASTER_GYM_BD--
+------------------------------------------------------------
+Create database Holiday_Master_Gym_BD
+------------------------------------------------------------
+--Creo la Tabla Importe--
+------------------------------------------------------------
+Create Table IMPORTES
+(
+id_importe int identity primary key,
+importe varchar(50)not null
+)
+
+------------------------------------------------------------
+--Creo la Tabla Dia--
+------------------------------------------------------------
+Create Table DIAS
+(
+id_dia int identity primary key,
+dia varchar(50)not null
+)
+
+------------------------------------------------------------
+--Creo la Tabla Clase--
+------------------------------------------------------------
+Create Table CLASES
+(
+id_clase int identity primary key,
+id_profesor int ,
+id_importe int,
+id_actividad int,
+id_dia int,
+precio int,
+hora int
+)
+
+------------------------------------------------------------
+--Creo la  Tabla Actividad--
+------------------------------------------------------------
+Create Table ACTIVIDADES 
+(
+id_actividad int identity primary key,
+importe int not null,
+cupo int not null,
+nombre varchar(50)not null
+)
+------------------------------------------------------------
+--Creo la Tabla Asiste_Profesor_Clase--
+------------------------------------------------------------
+Create Table  ASISTE_PROFESORES_CLASES
+(
+id_profesor int,
+id_clase int
+fecha date
+)
+
+------------------------------------------------------------
+--Creo la Tabla Profesor--
+------------------------------------------------------------
+Create Table PROFESORES 
+(
+id_profesor int identity primary key,
+id_caja int,
+id_estado_profesor int,
+apellido varchar(50)not null,
+nombre varchar(50)not null,
+dni int not null,
+n_telefono int,
+n_celular int,
+mutual varchar(50)
+)
+
+------------------------------------------------------------
+--Creo la Tabla Estado_Profesor--
+------------------------------------------------------------
+Create Table ESTADO_PROFESOR 
+(
+id_estado_profesor int identity primary key,
+estado_pago varchar(50)
+)
+
+------------------------------------------------------------
+--Creo la Tabla Recibo--
+------------------------------------------------------------
+Create Table RECIBOS
+(
+id_recibo int identity primary key,
+id_profesor int,
+n_recibo int not null,
+emisor_pago varchar(50)not null,
+receptor_pago varchar(50)not null,
+importe int not null,
+fecha  date,
+motivo varchar(50)not null,
+lugar varchar(50)not null
+)
+
+------------------------------------------------------------
+--Creo la Tabla Inscribe_Ficha_Inscripcion_Clase--
+------------------------------------------------------------
+Create Table INSCRIBE_FICHAS_INSCRIPCION_CLASES 
+(
+id_clase int,
+id_ficha_inscripcion int
+)
+
+------------------------------------------------------------
+--Creo la Tabla Estado_Inscripcion--
+------------------------------------------------------------
+Create Table ESTADO_INSCRIPCION
+(
+id_estado_inscripcion int identity primary key,
+estado varchar(50)not null
+)
+
+------------------------------------------------------------
+--Creo la Tabla Estado_Cliente_Pago--
+------------------------------------------------------------
+Create Table ESTADO_CLIENTE_PAGO 
+(
+id_estado_cliente_pago int identity primary key,
+estado varchar(50)not null
+)
+
+------------------------------------------------------------
+--Creo la Tabla Caja--
+------------------------------------------------------------
+Create Table CAJAS 
+(
+id_caja int identity primary key,
+id_cliente int,
+monto_pagado int,
+precio_total int, 
+vuelto int,
+fecha date
+)
+
+------------------------------------------------------------
+--Creo la Tabla Ficha_Inscripcion--
+------------------------------------------------------------
+Create Table FICHAS_INCRIPCION
+(
+id_ficha_inscripcion int identity primary key,
+id_cliente int,
+id_estado_cliente_pago int,
+id_estado_inscripcion int,
+id_caja int,
+fecha_inscripcion date,
+fecha_vencimiento date
+importe int,
+saldo int
+)
+
+------------------------------------------------------------
+--Creo la Tabla Cliente--
+------------------------------------------------------------
+Create Table CLIENTE
+(
+id_cliente int identity primary key,
+apellido varchar(50) not null,
+nombre varchar(50) not null,
+fecha_nacimiento date not null,
+correo_electronico varchar(50),
+id_sexo int,
+n_telefono int,
+n_celular int,
+direcion varchar(50),
+n_direccion varchar(50),
+mutual varchar(50),
+barrio varchar(50),
+codigo_postal int,
+edad int
+)
+
+------------------------------------------------------------
+--Creo la Tabla Sexo--
+------------------------------------------------------------
+Create Table SEXO 
+(
+id_sexo int identity primary key,
+sexo varchar(50) not null,
+codigo_sexo varchar(50) not null
+)
